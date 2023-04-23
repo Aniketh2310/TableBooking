@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+<a class="list-group-item clearfix" 
+   [routerLink]="[id]"
+   >
+    <span class="pull-left">
+        <img src="{{restau.imagesrc}}" alt="{{restau.name}}" class="img-responsive" style="max-height: 150px; max-width: 240px;" >
+    </span>
+    
+        <div class="cont">
+            <h2 class="list-group-item-heading" >{{restau.name}}</h2>
+            <p class="list-group-item-text">{{restau.des}}  
+            </p>
+            
+            <br>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class=" fa fa-solid fa-star-half-stroke"></i>
+        </div>
+    
+    
+</a>

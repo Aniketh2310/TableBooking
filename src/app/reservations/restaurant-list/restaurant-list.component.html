@@ -1,0 +1,10 @@
+
+<div class="row">
+    <div class="col-xs-12">
+        <app-restaurant-item 
+           *ngFor="let restauEl of restaurants let i=index"
+           [restau]="restauEl" [id]="i">
+        </app-restaurant-item>
+    </div>
+</div>
+
