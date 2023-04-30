@@ -12,7 +12,7 @@ export class ReservationsComponent implements OnInit{
   selectedRestaurant:Restaurant;
 
   constructor(private reservationsService:ReservationsService){}
-
+  filteredStatus='';
   
   ngOnInit(){
       this.reservationsService.restaurantSelected

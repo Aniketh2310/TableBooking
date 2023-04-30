@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SwagathComponent } from './swagath.component';
+import { FillComponent } from './fill.component';
 
-describe('SwagathComponent', () => {
-  let component: SwagathComponent;
-  let fixture: ComponentFixture<SwagathComponent>;
+describe('FillComponent', () => {
+  let component: FillComponent;
+  let fixture: ComponentFixture<FillComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SwagathComponent ]
+      declarations: [ FillComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SwagathComponent);
+    fixture = TestBed.createComponent(FillComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

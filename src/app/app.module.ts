@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; 
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -16,6 +17,8 @@ import { RestaurantItemComponent } from './reservations/restaurant-list/restaura
 import { AthidhiLayoutComponent } from './reservations/athidhi-layout/athidhi-layout.component';
 import { AthidhiComponent } from './athidhi/athidhi.component';
 import { SwagathComponent } from './swagath/swagath.component';
+import { DetailsComponent } from './reservations/details/details.component';
+import { FillComponent } from './fill/fill.component';
 
 
 
@@ -35,11 +38,16 @@ import { SwagathComponent } from './swagath/swagath.component';
     AthidhiLayoutComponent,
     AthidhiComponent,
     SwagathComponent,
+    DetailsComponent,    
+    FillComponent,
+    
+    
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule   
   ],
   providers: [],
   bootstrap: [AppComponent]

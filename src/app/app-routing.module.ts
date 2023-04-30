@@ -8,6 +8,9 @@ import { ReservationsComponent } from './reservations/reservations.component';
 import { AthidhiLayoutComponent } from "./reservations/athidhi-layout/athidhi-layout.component";
 import { AthidhiComponent } from "./athidhi/athidhi.component";
 import { SwagathComponent } from "./swagath/swagath.component";
+import { DetailsComponent } from "./reservations/details/details.component";
+import { TableComponent } from "./table/table.component";
+import { FillComponent } from "./fill/fill.component";
 
 
 const appRoutes:Routes=
@@ -17,9 +20,15 @@ const appRoutes:Routes=
     {path:'home',component:HomeComponent},
     {path:'about',component:AboutComponent},
     {path:'contactus',component:ContactusComponent},
-    {path:'reservations',component:ReservationsComponent},
-    {path:'reservations/0',component:AthidhiComponent},
-    {path:'reservations/1',component:SwagathComponent}
+    {path:'reservations',component:ReservationsComponent,},
+    {path:'reservations/0',component:AthidhiLayoutComponent },
+    // , children:[
+    //   {path:'fill',component:FillComponent}
+    // ] 
+    // },
+    {path:'reservations/1',component:SwagathComponent},
+    {path:'details',component:DetailsComponent}
+    
 ]
 
 @NgModule

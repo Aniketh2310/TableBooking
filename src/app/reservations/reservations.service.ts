@@ -5,6 +5,7 @@ import { Restaurant } from "./restaurant.model";
 export class ReservationsService
 {
     restaurantSelected=new EventEmitter<Restaurant>();
+    private tableNumber = '';
 
     private restaurants:Restaurant[]=[
     new Restaurant('Athidhi Biryani House','Vanasthalipuram,Hyderabad','https://i.pinimg.com/originals/05/64/c4/0564c4cc63bd2b27360e0cb6b19484ae.jpg'),
@@ -20,4 +21,12 @@ export class ReservationsService
   {
     return this.restaurants[id];
   }
+
+  // getTableNumber(): string {
+  //   return this.tableNumber;
+  // }
+
+  // setTableNumber(tableNumber: string): void {
+  //   this.tableNumber = tableNumber;
+  // }
 }

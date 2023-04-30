@@ -1,7 +1,121 @@
-<div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h1>Welcome to Swagath Grand</h1>
-      </div>  
-    </div>
+<p>________________________________________________  <strong>Entrance</strong>   ____________________________________________________________________________________________________________________</p>
+
+
+
+<div class="table" id="table1" [ngClass]="{ selected: selectedTables.has('table1') }" (click)="toggleTable('table1')">
+    <div>1</div>
+    <div class="chair top-left"></div>
+    <div class="chair top-right"></div>
+    <div class="chair middle-left"></div>
+    <div class="chair middle-right"></div>
+    <div class="chair bottom-left"></div>
+    <div class="chair bottom-right"></div>
   </div>
+  <div class="table" id="table2" [ngClass]="{ selected: selectedTables.has('table2') }" (click)="toggleTable('table2')">
+    <div>2</div>
+    <div class="chair top-left"></div>
+    <div class="chair top-right"></div>
+    <div class="chair middle-left"></div>
+    <div class="chair middle-right"></div>
+    <div class="chair bottom-left"></div>
+    <div class="chair bottom-right"></div>
+  </div>
+  
+  <div class="table" id="table3" [ngClass]="{ selected: selectedTables.has('table3') }" (click)="toggleTable('table3')">
+    <div>3</div>
+    <div class="chair top-left"></div>
+    <div class="chair top-right"></div>
+    <div class="chair middle-left"></div>
+    <div class="chair middle-right"></div>
+    <div class="chair bottom-left"></div>
+    <div class="chair bottom-right"></div>
+  </div>
+  
+  <div class="table" id="table4" [ngClass]="{ selected: selectedTables.has('table4') }" (click)="toggleTable('table4')">
+    <div>4</div>
+    <div class="chair top-left"></div>
+    <div class="chair top-right"></div>
+    <div class="chair middle-left"></div>
+    <div class="chair middle-right"></div>
+    <div class="chair bottom-left"></div>
+    <div class="chair bottom-right"></div>
+  </div>
+  
+  <!-- <div class="divider" id="border">
+    <h2>border</h2>
+  </div> -->
+  
+  <div class="table" id="table5" [ngClass]="{ selected: selectedTables.has('table5') }" (click)="toggleTable('table5')">
+    <div>5</div>
+    <div class="chair top-left-square"></div>
+    <div class="chair top-right-square"></div>
+    <div class="chair bottom-left-square"></div>
+    <div class="chair bottom-right-square"></div>
+  </div>
+  
+  <div class="table" id="table6" [ngClass]="{ selected: selectedTables.has('table6') }" (click)="toggleTable('table6')">
+    <div>6</div>
+    <div class="chair top-left-square"></div>
+    <div class="chair top-right-square"></div>
+    <div class="chair bottom-left-square"></div>
+    <div class="chair bottom-right-square"></div>
+  </div>
+  
+  <!-- <div class="divider" id="border">
+    <h2>border</h2>
+  </div> -->
+  
+  <div class="table" id="table7" [ngClass]="{ selected: selectedTables.has('table7') }" (click)="toggleTable('table7')">
+    <div>7</div>
+    <div class="chair top-left-circle"></div>
+    <div class="chair top-right-circle"></div>
+    <div class="chair bottom-left-circle"></div>
+    <div class="chair bottom-right-circle"></div>
+  </div>
+  
+  <div class="table" id="table8" [ngClass]="{ selected: selectedTables.has('table8') }" (click)="toggleTable('table8')">
+    <div>8</div>
+    <div class="chair top-left-circle"></div>
+    <div class="chair top-right-circle"></div>
+    <div class="chair bottom-left-circle"></div>
+    <div class="chair bottom-right-circle"></div>
+  </div>
+  
+  
+  <div class="table" id="table9" [ngClass]="{ selected: selectedTables.has('table9') }" (click)="toggleTable('table9')">
+    <div>9</div>
+    <div class="chair top-left-circle"></div>
+    <div class="chair top-right-circle"></div>
+  </div>
+  
+  <div class="table" id="table10" [ngClass]="{ selected: selectedTables.has('table10') }" (click)="toggleTable('table10')">
+    <div>10</div>
+    <div class="chair top-left-circle"></div>
+    <div class="chair top-right-circle"></div>
+  </div>
+  
+  <!-- <div class="table" id="table11">
+    <div>11</div>
+    <div class="chair top-left"></div>
+    <div class="chair top-right"></div>
+    <div class="chair middle-left"></div>
+    <div class="chair middle-right"></div>
+    <div class="chair bottom-left"></div>
+    <div class="chair bottom-right"></div>
+    <div class="chair top-left"></div>
+    <div class="chair top-right"></div>
+    <div class="chair middle-left"></div>
+    <div class="chair middle-right"></div>
+    <div class="chair bottom-left"></div>
+    <div class="chair bottom-right"></div>
+  </div> -->
+  <div class="row">
+    <div class="col-xs-12">
+      <hr>
+      <button class="btn"  (click)="onButtonClick()" [disabled]="selectedTables.size === 0">Confirm</button>        
+    </div>
+   </div>
+
+   
+  
+  
