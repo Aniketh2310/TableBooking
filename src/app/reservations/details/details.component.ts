@@ -1,6 +1,7 @@
 import { Component ,Input,OnInit } from '@angular/core';
 import { Restaurant } from '../restaurant.model';
 import { ReservationsService } from '../reservations.service';
+import { TableNumber } from 'src/app/tablenumber.service';
 
 
 @Component({
@@ -8,23 +9,19 @@ import { ReservationsService } from '../reservations.service';
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
-export class DetailsComponent  {
+export class DetailsComponent  implements OnInit {
   @Input() restaun:Restaurant;
+  
+   tableNumber ;
 
-  // selectedTables: string;
-   tableNumber = '';
+  constructor(private tableno:TableNumber)
+  {
 
-  // constructor(private reservationsService:ReservationsService)
-  // {
+  }
 
-  // }
-
-  // onTableSelected(tableId: string): void 
-  // {
-  //   this.selectedTables = tableId;
-  // }
-  // ngOnInit(): void {
-  //   this.tableNumber = this.reservationsService.getTableNumber(); // get the table number from shared service
-  // }
+  ngOnInit() 
+  {
+    this.tableNumber = this.tableno.getTableNumber(); // get the table number from shared service    
+  }
 
 }

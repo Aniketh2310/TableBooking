@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { TableNumber } from 'src/app/tablenumber.service';
 
 
 @Component({
@@ -11,8 +12,10 @@ export class SwagathComponent
 {
   selectedTables: Set<string> = new Set<string>();
 
-  constructor(private router: Router) { }
-  toggleTable(tableId: string): void 
+  constructor(private router: Router,private tableno:TableNumber) { }
+
+
+  toggleTable(tableId: string,tablenum:number): void 
   {
     if (this.selectedTables.has(tableId)) 
     {
@@ -22,12 +25,13 @@ export class SwagathComponent
     else
     {
       this.selectedTables.add(tableId);
+      this.tableno.setTableNumber(tablenum);
       console.log("selected")
     }
-  }
-  
+    
+  } 
 
-   onButtonClick() 
+  onButtonClick() 
   {
     this.router.navigate(['/details']);
   }

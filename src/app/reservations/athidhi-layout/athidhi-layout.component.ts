@@ -3,6 +3,7 @@ import { Restaurant } from '../restaurant.model';
 import { ReservationsService } from '../reservations.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Router } from '@angular/router';
+import { TableNumber } from 'src/app/tablenumber.service';
 
 
 @Component({
@@ -13,13 +14,11 @@ import { Router } from '@angular/router';
 export class AthidhiLayoutComponent 
 {
   selectedTables: Set<string> = new Set<string>();
-  @Output() tableSelected = new EventEmitter<number>();
+
+  constructor(private router: Router,private tableno:TableNumber) { }
 
 
-  constructor(private router: Router) { }
-
-
-  toggleTable(tableId: string): void 
+  toggleTable(tableId: string,tablenum:number): void 
   {
     if (this.selectedTables.has(tableId)) 
     {
@@ -29,17 +28,18 @@ export class AthidhiLayoutComponent
     else
     {
       this.selectedTables.add(tableId);
-      // this.reservationsService.setTableNumber(tableId);
+      this.tableno.setTableNumber(tablenum);
       console.log("selected")
     }
     
-  }
-  
+  } 
 
-   onButtonClick() 
+  onButtonClick() 
   {
     this.router.navigate(['/details']);
   }
+
+}
 
 
 
@@ -66,4 +66,4 @@ export class AthidhiLayoutComponent
     //     }
     //    )
     // };
-}
+

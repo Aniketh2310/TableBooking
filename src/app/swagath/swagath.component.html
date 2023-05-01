@@ -2,7 +2,7 @@
 
 
 
-<div class="table" id="table1" [ngClass]="{ selected: selectedTables.has('table1') }" (click)="toggleTable('table1')">
+<div class="table" id="table1" [ngClass]="{ selected: selectedTables.has('table1') }" (click)="toggleTable('table1',1)">
     <div>1</div>
     <div class="chair top-left"></div>
     <div class="chair top-right"></div>
@@ -11,7 +11,7 @@
     <div class="chair bottom-left"></div>
     <div class="chair bottom-right"></div>
   </div>
-  <div class="table" id="table2" [ngClass]="{ selected: selectedTables.has('table2') }" (click)="toggleTable('table2')">
+  <div class="table" id="table2" [ngClass]="{ selected: selectedTables.has('table2') }" (click)="toggleTable('table2',2)">
     <div>2</div>
     <div class="chair top-left"></div>
     <div class="chair top-right"></div>
@@ -21,7 +21,7 @@
     <div class="chair bottom-right"></div>
   </div>
   
-  <div class="table" id="table3" [ngClass]="{ selected: selectedTables.has('table3') }" (click)="toggleTable('table3')">
+  <div class="table" id="table3" [ngClass]="{ selected: selectedTables.has('table3') }" (click)="toggleTable('table3',3)">
     <div>3</div>
     <div class="chair top-left"></div>
     <div class="chair top-right"></div>
@@ -31,7 +31,7 @@
     <div class="chair bottom-right"></div>
   </div>
   
-  <div class="table" id="table4" [ngClass]="{ selected: selectedTables.has('table4') }" (click)="toggleTable('table4')">
+  <div class="table" id="table4" [ngClass]="{ selected: selectedTables.has('table4') }" (click)="toggleTable('table4',4)">
     <div>4</div>
     <div class="chair top-left"></div>
     <div class="chair top-right"></div>
@@ -41,11 +41,9 @@
     <div class="chair bottom-right"></div>
   </div>
   
-  <!-- <div class="divider" id="border">
-    <h2>border</h2>
-  </div> -->
   
-  <div class="table" id="table5" [ngClass]="{ selected: selectedTables.has('table5') }" (click)="toggleTable('table5')">
+  
+  <div class="table" id="table5" [ngClass]="{ selected: selectedTables.has('table5') }" (click)="toggleTable('table5',5)">
     <div>5</div>
     <div class="chair top-left-square"></div>
     <div class="chair top-right-square"></div>
@@ -53,7 +51,7 @@
     <div class="chair bottom-right-square"></div>
   </div>
   
-  <div class="table" id="table6" [ngClass]="{ selected: selectedTables.has('table6') }" (click)="toggleTable('table6')">
+  <div class="table" id="table6" [ngClass]="{ selected: selectedTables.has('table6') }" (click)="toggleTable('table6',6)">
     <div>6</div>
     <div class="chair top-left-square"></div>
     <div class="chair top-right-square"></div>
@@ -61,11 +59,8 @@
     <div class="chair bottom-right-square"></div>
   </div>
   
-  <!-- <div class="divider" id="border">
-    <h2>border</h2>
-  </div> -->
-  
-  <div class="table" id="table7" [ngClass]="{ selected: selectedTables.has('table7') }" (click)="toggleTable('table7')">
+ 
+  <div class="table" id="table7" [ngClass]="{ selected: selectedTables.has('table7') }" (click)="toggleTable('table7',7)">
     <div>7</div>
     <div class="chair top-left-circle"></div>
     <div class="chair top-right-circle"></div>
@@ -73,7 +68,7 @@
     <div class="chair bottom-right-circle"></div>
   </div>
   
-  <div class="table" id="table8" [ngClass]="{ selected: selectedTables.has('table8') }" (click)="toggleTable('table8')">
+  <div class="table" id="table8" [ngClass]="{ selected: selectedTables.has('table8') }" (click)="toggleTable('table8',8)">
     <div>8</div>
     <div class="chair top-left-circle"></div>
     <div class="chair top-right-circle"></div>
@@ -82,13 +77,13 @@
   </div>
   
   
-  <div class="table" id="table9" [ngClass]="{ selected: selectedTables.has('table9') }" (click)="toggleTable('table9')">
+  <div class="table" id="table9" [ngClass]="{ selected: selectedTables.has('table9') }" (click)="toggleTable('table9',9)">
     <div>9</div>
     <div class="chair top-left-circle"></div>
     <div class="chair top-right-circle"></div>
   </div>
   
-  <div class="table" id="table10" [ngClass]="{ selected: selectedTables.has('table10') }" (click)="toggleTable('table10')">
+  <div class="table" id="table10" [ngClass]="{ selected: selectedTables.has('table10') }" (click)="toggleTable('table10',10)">
     <div>10</div>
     <div class="chair top-left-circle"></div>
     <div class="chair top-right-circle"></div>
@@ -109,6 +104,17 @@
     <div class="chair bottom-left"></div>
     <div class="chair bottom-right"></div>
   </div> -->
+
+
+  <!-- <div class="divider" id="border">
+    <h2>border</h2>
+  </div> -->
+
+   <!-- <div class="divider" id="border">
+    <h2>border</h2>
+  </div> -->
+  
+ 
   <div class="row">
     <div class="col-xs-12">
       <hr>
@@ -116,6 +122,6 @@
     </div>
    </div>
 
+
    
-  
-  
+   
