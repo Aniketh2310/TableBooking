@@ -1,58 +1,99 @@
- 
- <div class="col-xs-5">
+<div class="box1">
+<div class="col-xs-5">
+  <h2><strong>Selected Restaurant Details:</strong></h2>
+  <img [src]="selectedRestaurant.imagesrc"  class="img-responsive" style="max-height: 200px;"> 
+        
+  <label for="rname">Restaurant Name:</label>
+  <input type="text" id="rname" name="rname" [(ngModel)]="selectedRestaurant.name" readonly>
+
+  <label for="loc">Location:</label>
+  <input type="text" id="loc" name="loc" [(ngModel)]="selectedRestaurant.des" readonly>
 
   <label for="tableno" >Selected Table No:</label>
   <input type="text" id="tableno" name="tableno" [(ngModel)]="tableNumber" readonly>
-  <h3>Enter your detail's:</h3>
-  <hr>
-  <form action="/action_page.php">
-    <label for="fname">Name:</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+  
+</div>
+</div> 
 
-    <!-- <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.."> -->
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="xyz@gmail.com" required>
 
-    <label for="phone">Phone:</label>
-    <input type="tel" id="phone" name="phone" placeholder="xxxxxxxxxx" required>
-    
-    
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="date" required>
-    
-    
-    <label for="time">Time:</label>
-    <p>Select time after 12pm</p>
-    <input type="time" id="time" name="time" required>
-    
-    
-    
-    <label for="party-size">Party Size:</label>
-    <input type="number" id="party-size" name="party-size" required>
-    
-    
-    <label for="table-preference">Table Preference:</label>
-    <select id="table-preference" name="table-preference">
-      <option value="">Select an option</option>
-      <option value="window">Window Seat</option>
-      <option value="booth">Booth</option>
-      <option value="patio">Outdoor Patio</option>
-      <option value="bar">Bar Seating</option>
-    </select>
-          
-     <!-- <br>
-     <label for="special-requests">Special Requests:</label>
-     <textarea id="special-requests" name="special-requests"></textarea> -->
-          
-          
-          
-
-    
-    <input type="submit" value="Submit">
-  </form>
+  
+<div class="box2">
+  <div class="col-xs-5">
+    <h3> <strong>Enter your detail's:</strong> </h3>
+    <hr>
+    <form action="/action_page.php">
+      <label for="fname">Name:</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name.." required>    
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="xyz@gmail.com" required>
+  
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" placeholder="xxxxxxxxxx" required>
+      
+      
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required>
+      
+      
+      <label for="time">Time:</label>
+      <p>Select time after 12pm</p>
+      <input type="time" id="time" name="time" required>
+      
+      
+      
+      <label for="party-size">Party Size:</label>
+      <input type="number" id="party-size" name="party-size" required>
+      
+      
+      <label for="table-preference">Table Preference:</label>
+      <select id="table-preference" name="table-preference">
+        <option value="">Select an option</option>
+        <option value="window">Window Seat</option>
+        <option value="booth">Booth</option>
+        <option value="patio">Outdoor Patio</option>
+        <option value="bar">Bar Seating</option>
+      </select>
+      
+      <input type="submit" value="Submit" >
+    </form>
+  </div>
 </div>
 
 
 
+  
+ 
+ 
+ 
+ 
+ 
+ <!-- <h2><strong>Selected Restaurant Details:</strong></h2>
+<img [src]="selectedRestaurant.imagesrc"  class="img-responsive"
+        style="max-height: 200px;"> 
+   
+  <h4> <strong>Restaurant Name : </strong> {{selectedRestaurant.name}}</h4>
+  <h4><strong>Location : </strong>  {{selectedRestaurant.des}}</h4>
+  <h4><strong>Selected Table no : </strong> {{tableNumber}}</h4> -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!-- <div class="col-xs-5">
+  <label for="tableno" >Selected Table No:</label>
+  <input type="text" id="tableno" name="tableno" [(ngModel)]="tableNumber" readonly>
+  
+  <label for="rname">Restaurant Name:</label>
+  <input type="text" id="rname" name="rname" [(ngModel)]="selectedRestaurant.name" readonly>
+
+  <label for="loc">Location:</label>
+  <input type="text" id="loc" name="loc" [(ngModel)]="selectedRestaurant.des" readonly>
+</div> -->

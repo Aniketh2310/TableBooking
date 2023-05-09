@@ -9,17 +9,18 @@ import { Restaurant } from './restaurant.model';
   providers:[ReservationsService]
 })
 export class ReservationsComponent implements OnInit{
-  selectedRestaurant:Restaurant;
+  // selectedRestaurant:Restaurant;
 
   constructor(private reservationsService:ReservationsService){}
-  filteredStatus='';
+  
   
   ngOnInit(){
-      this.reservationsService.restaurantSelected
-      .subscribe(
-        (restaurant:Restaurant)=>{
-          this.selectedRestaurant=restaurant;
-        }
-      )
+      // this.reservationsService.restaurantSelected
+      // .subscribe(
+      //   (restaurant:Restaurant)=>{
+      //     this.selectedRestaurant=restaurant;
+      //   }
+      // )
   }
+  
 }

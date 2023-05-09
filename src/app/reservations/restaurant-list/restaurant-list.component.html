@@ -3,7 +3,7 @@
     <div class="col-xs-12">
         <app-restaurant-item 
            *ngFor="let restauEl of restaurants let i=index"
-           [restau]="restauEl" [id]="i">
+           [restau]="restauEl" [id]="i" (restaurantSelected)="onRestaurantSelected($event)">
         </app-restaurant-item>
     </div>
 </div>

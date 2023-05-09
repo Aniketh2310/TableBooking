@@ -19,6 +19,7 @@ import { AthidhiComponent } from './athidhi/athidhi.component';
 import { SwagathComponent } from './swagath/swagath.component';
 import { DetailsComponent } from './reservations/details/details.component';
 import { FillComponent } from './fill/fill.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -47,7 +48,8 @@ import { FillComponent } from './fill/fill.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule   
+    FormsModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
