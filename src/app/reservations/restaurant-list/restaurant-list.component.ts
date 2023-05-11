@@ -13,7 +13,16 @@ export class RestaurantListComponent implements OnInit
   
   restaurants:Restaurant[];
   selectedRestaurant: Restaurant;
+  _filtertext:string='';
+  filteredRestaurants: Restaurant[];
 
+  get filtertext(){
+    return this._filtertext;
+  }
+  set filtertext(value:string){
+    this._filtertext=value;
+    this.filteredRestaurants= this.filterRestaurantByName(value);
+  }
   
   constructor(private reservationsService:ReservationsService,private restaurantService: RestaurantService)
   {
@@ -22,10 +31,22 @@ export class RestaurantListComponent implements OnInit
   ngOnInit()
   {
        this.restaurants=this.reservationsService.getRestaurants();
+       this.filteredRestaurants=this.restaurants;
   }
   onRestaurantSelected(event: { index: number, restaurant: Restaurant }) 
   {
     this.restaurantService.selectedRestaurant = event.restaurant;
   }
   
+  filterRestaurantByName(filterTerm:string){
+    if(this.restaurants.length===0 || filterTerm==='')
+    {
+      return this.restaurants;
+    }
+    else{
+      return this.restaurants.filter((resnt)=>{
+        return resnt.name.toLowerCase().startsWith(filterTerm.toLowerCase());
+      })
+    }
+  }
 }

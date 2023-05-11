@@ -6,7 +6,8 @@ import { RestaurantService } from '../restaurant.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Time } from '@angular/common';
 import { map } from 'rxjs';
-import { bookng } from 'src/app/model/bookings';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+// import { bookng } from 'src/app/model/bookings';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class DetailsComponent  implements OnInit {
   @Input() restauran:Restaurant;
   selectedRestaurant: Restaurant ;  
   tableNumber;
-  allbking:bookng[]=[];
+  // allbking:bookng[]=[];
 
   constructor(private tableno:TableNumber,
               private reservationsService: ReservationsService,
@@ -33,13 +34,13 @@ export class DetailsComponent  implements OnInit {
   {
     this.tableNumber = this.tableno.getTableNumber(); // get the table number from shared service 
     this.selectedRestaurant = this.restaurantService.selectedRestaurant;
-    this.fetchBookings();
+    // this.fetchBookings();
 
   }
-  onBookingsFetch()
-  {
-    this.fetchBookings();
-  }
+  // onBookingsFetch()
+  // {
+  //   this.fetchBookings();
+  // }
 
   onCreatePost(postData: { table: number,Name: string; email: string; phno: number; date: number; time: number }){
     console.log(postData);
@@ -50,9 +51,7 @@ export class DetailsComponent  implements OnInit {
     });
   }
 
-  //  onFetchPosts(){  
-  //   this.http.get('https://tablebooking-e9ede-default-rtdb.firebaseio.com/posts.json',)
-  // }
+  
   onBookCreate(bookings:{firstname:string,email:string,phone:string,date:Date,time:Time,partysize:number,tablepreference:string}){
     console.log(bookings);
     
@@ -79,23 +78,25 @@ export class DetailsComponent  implements OnInit {
       console.log(res);
     });
   }
-  private fetchBookings(){
-    this.http.get<{[key:string]:bookng}>('https://deepu-254a5-default-rtdb.firebaseio.com/bookingss.json')
-    .pipe(map((res)=>{
-      const bookings=[];
-      for( const key in res){
-        if(res.hasOwnProperty(key))
-        {
-          bookings.push({...res[key],id:key})
-        }
+
+  //for post method::
+  // private fetchBookings(){
+  //   this.http.get<{[key:string]:bookng}>('https://deepu-254a5-default-rtdb.firebaseio.com/bookingss.json')
+  //   .pipe(map((res)=>{
+  //     const bookings=[];
+  //     for( const key in res){
+  //       if(res.hasOwnProperty(key))
+  //       {
+  //         bookings.push({...res[key],id:key})
+  //       }
         
-      }
-      return bookings;
-    }))
-    .subscribe((bookings)=>{
-      console.log(bookings);
-      this.allbking=bookings;
-    });
-  }
+  //     }
+  //     return bookings;
+  //   }))
+  //   .subscribe((bookings)=>{
+  //     console.log(bookings);
+  //     this.allbking=bookings;
+  //   });
+  // }
 
 }
