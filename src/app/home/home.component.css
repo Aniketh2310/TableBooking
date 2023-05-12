@@ -11,7 +11,7 @@
 }  */
 button {
     position: absolute;
-    top: 50%;
+    top: -250px;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid #f44336;
@@ -43,4 +43,22 @@ button {
     background-size: cover;
     position: relative;
  }
- 
+.container{
+    text-align: center;
+    padding-top: 210px;
+    color: antiquewhite;
+ }
+ .container h1{
+    font-family: "Abril Fatface", cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: #777;
+    text-align: center;
+    /* text-shadow: 1px 1px #f5f5f5; */
+ }
+ .container p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: #666;
+    line-height: 1.5;
+ }
