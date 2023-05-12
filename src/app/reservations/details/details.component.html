@@ -1,4 +1,125 @@
-<div class="box1">
+
+  <div class="box1">
+    <div class="col-xs-5">
+      <!-- <h2><strong>Selected Restaurant Details:</strong></h2>
+      <img [src]="selectedRestaurant.imagesrc"  class="img-responsive" style="max-height: 200px;"> 
+            
+      <label for="rname">Restaurant Name:</label>
+      <input type="text" id="rname" name="rname" [(ngModel)]="selectedRestaurant.name" readonly>
+    
+      <label for="loc">Location:</label>
+      <input type="text" id="loc" name="loc" [(ngModel)]="selectedRestaurant.des" readonly>
+    
+      <label for="tableno" >Selected Table No:</label>
+      <input type="text" id="tableno" name="tableno" [(ngModel)]="tableNumber" readonly> -->
+      <h2><strong>Selected Restaurant Details:</strong></h2>
+    <img [src]="selectedRestaurant.imagesrc"  class="img-responsive"
+            style="max-height: 200px;"> 
+       
+      <h4> <strong>Restaurant Name : </strong> {{selectedRestaurant.name}}</h4>
+      <h4><strong>Location : </strong>  {{selectedRestaurant.des}}</h4>
+      <h4><strong>Selected Table no : </strong> {{tableNumber}}</h4>
+    
+      
+    </div>
+    </div> 
+    
+    
+    
+      
+    <div class="box2">
+      <div class="col-xs-5">
+        <h3> <strong>Enter your detail's:</strong> </h3>
+        <hr>
+        <form action="/action_page.php" #bookedForm="ngForm"   (ngSubmit)="onBookCreate(bookedForm.value)">
+          
+          <label for="fname">Name:</label>
+          <input type="text" id="fname"  name="firstname" placeholder="Your name.." required ngModel>    
+      
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="xyz@gmail.com" required ngModel>
+      
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" placeholder="xxxxxxxxxx" required ngModel>
+          
+          
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required ngModel>
+          
+          
+          <label for="time">Time:</label>
+          <p>Select time after 12pm</p>
+          <input type="time" id="time" name="time" required ngModel>
+          
+          
+          
+          <label for="party-size">Party Size:</label>
+          <input type="number" id="party-size" name="partysize" required ngModel>
+          
+          
+          <label for="table-preference">Table Preference:</label>
+          <select id="table-preference" name="tablepreference" ngModel>
+            <option value="">Select an option</option>
+            <option value="window">Window Seat</option>
+            <option value="booth">Booth</option>
+            <option value="patio">Outdoor Patio</option>
+            <option value="bar">Bar Seating</option>
+          </select>
+          
+          <input type="submit" value="Submit" >
+        </form>
+      </div>
+    </div>
+    
+    
+     <!-- <h2><strong>Selected Restaurant Details:</strong></h2>
+    <img [src]="selectedRestaurant.imagesrc"  class="img-responsive"
+            style="max-height: 200px;"> 
+       
+      <h4> <strong>Restaurant Name : </strong> {{selectedRestaurant.name}}</h4>
+      <h4><strong>Location : </strong>  {{selectedRestaurant.des}}</h4>
+      <h4><strong>Selected Table no : </strong> {{tableNumber}}</h4> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- <div class="box1">
   <div class="col-xs-5">
     <h2><strong>Selected Restaurant Details:</strong></h2>
   <img [src]="selectedRestaurant.imagesrc"  class="img-responsive"
@@ -55,4 +176,17 @@
         <input type="submit" value="Submit" >
       </form>
     </div>
-  </div>
+  </div> -->
+
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
