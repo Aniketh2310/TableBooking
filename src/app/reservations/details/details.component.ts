@@ -22,6 +22,7 @@ export class DetailsComponent  implements OnInit {
   selectedRestaurant: Restaurant ;  
   tableNumber;
   // allbking:bookng[]=[];
+  submitted=false;
 
   constructor(private tableno:TableNumber,
               private reservationsService: ReservationsService,
@@ -78,6 +79,7 @@ export class DetailsComponent  implements OnInit {
     .subscribe((res)=>{
       console.log(res);
     });
+    this.submitted=true;
   }
 
   //for post method::

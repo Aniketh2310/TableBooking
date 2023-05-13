@@ -1,15 +1,4 @@
 
-/* .row
-{
-  margin-top: 20px;
-  padding-left: 100px;
-  
-} */
-/*div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  } */
 
   input[type=text], select {
     width: 100%;
@@ -107,17 +96,161 @@
     margin-top: 20px;
 
   }
+  .green-text{
+    color: green;
+  }
 
-  
-  
-  /* .box1 {
-    width: 30%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* body{
+    font-family: 'Poppins',sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://resizer.otstatic.com/v2/photos/wide-huge/2/47187862.jpg);
+}
+.container {
+    display: flex;
+    width: 70vw;
+    height: 60vh;
+    margin: 0 auto;
+    box-shadow: 0 0 17px 10px rgba(169, 162, 162, 0.74);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+
+  .design {
+    width: 50%;
+    height: 90%;
+    grid-area: design;
+    position: relative;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+  }  
+
+  .design img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
   }
   
-  .box2 {
-    width: 50%;
-  } */
+  .login {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+.login h3.title{
+    margin: 15px 0;
+    color: #e6e6e6;
+}
+
+.login-btn{
+    width: 68%;
+    padding: 10px;
+    color: white;
+    background: linear-gradient(to right , #ff966d, #fa538d, #89379c);
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.input-text{
+    background: #e6e6e6;
+    height: 40px;
+    display: flex;
+    width: 60%;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 15px;
+    margin: 5px 0;
+}
+
+.email-text{
+    background: #e6e6e6;
+    height: 40px;
+    display: flex;
+    width: 60%;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 15px;
+    margin: 5px 0;
+    outline: none;
+}
+
+.input-text i{
+    color: #686868;
+}
+::placeholder{
+    color: #9a9a9a;
+}
+.input-text input{
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.email-text input{
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.title {
+    font-family: "Abril Fatface", cursive;
+    font-weight: bold;
+    color: #777;
+    font-size: 23px;
+}
+
+.text-under-image {
+    position: absolute;
+    padding-top: 0px;
+    bottom: 10px;
+    left: 10px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: white;
+  }
   
+  .text-under-image h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .text-under-image p {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+  } */
 
 
 
@@ -133,113 +266,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-input[type=email], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-input[type=tel], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-input[type=date], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-input[type=time], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-input[type=number], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-input[type=table-preference], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-input[type=special-requests], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-.box2 {
-  border-radius: 5px;
-  background-color:pink;
-  padding-left: 20px;
-  align-items: center;
-  margin-top: 20px;
-
-} */
 
