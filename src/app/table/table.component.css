@@ -1,0 +1,29 @@
+.tanku
+{
+    padding-left:35%;
+}
+.logo
+{
+    padding-left:40%;
+}
+.details
+{
+    padding-left:33%;
+}
+.cenbtn
+{
+    padding-left:40%;
+}
+.btn
+  {
+    text-decoration: none;
+    display: inline-block;
+    color:white;
+    border: 1px solid white;
+    padding: 12px ;
+    font-size: 15px;
+    position: relative;
+    cursor: pointer;
+    background: green;
+    margin-top: 10px;
+  }

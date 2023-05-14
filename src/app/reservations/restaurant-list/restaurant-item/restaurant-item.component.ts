@@ -19,7 +19,7 @@ export class RestaurantItemComponent implements OnInit{
   onSelect(index: number, restaurant: Restaurant) 
   {
     this.restaurantSelected.emit({ index: index, restaurant: restaurant });
-    console.log("Res emitted");
+    console.log("Restaurant Selected");
     
   }
 

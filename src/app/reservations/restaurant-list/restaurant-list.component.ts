@@ -16,10 +16,12 @@ export class RestaurantListComponent implements OnInit
   _filtertext:string='';
   filteredRestaurants: Restaurant[];
 
-  get filtertext(){
+  get filtertext()
+  {
     return this._filtertext;
   }
-  set filtertext(value:string){
+  set filtertext(value:string)
+  {
     this._filtertext=value;
     this.filteredRestaurants= this.filterRestaurantByName(value);
   }
@@ -38,12 +40,14 @@ export class RestaurantListComponent implements OnInit
     this.restaurantService.selectedRestaurant = event.restaurant;
   }
   
-  filterRestaurantByName(filterTerm:string){
+  filterRestaurantByName(filterTerm:string)
+  {
     if(this.restaurants.length===0 || filterTerm==='')
     {
       return this.restaurants;
     }
-    else{
+    else
+    {
       return this.restaurants.filter((resnt)=>{
         return resnt.name.toLowerCase().startsWith(filterTerm.toLowerCase());
       })

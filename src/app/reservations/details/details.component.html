@@ -1,4 +1,81 @@
-<div *ngIf="!submitted else showSubmitted">
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="details.component.css">
+  </head>
+  <body>
+    <div class="container">
+
+      
+      <div class="design">
+        <h2><strong>Selected Restaurant Details:</strong></h2>
+        <img [src]="selectedRestaurant.imagesrc"  class="img-responsive" style="max-height: 200px;"> 
+            
+          <h4> <strong>Restaurant Name : </strong> {{selectedRestaurant.name}}</h4>
+          <h4><strong>Location : </strong>  {{selectedRestaurant.des}}</h4>
+          <h4><strong>Selected Table no : </strong> {{tableNumber}}</h4>         
+      </div>
+     
+
+
+      <div class="login">
+        <h3 class="title">Fill Your Details:</h3>
+        <form  #bookedForm="ngForm"   (ngSubmit)="onBookCreate(bookedForm.value)">
+
+        <div class="input-text">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="fname"  name="firstname" placeholder="Name" required ngModel>           
+        </div>
+
+        <div class="email-text">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="email" name="email" placeholder="Email" required ngModel>          
+        </div>
+    
+        <div class="email-text">
+          <i class="fa-solid fa-phone"></i>
+          <input type="tel" id="phone" name="phone" placeholder="phone number" required ngModel>         
+        </div>
+    
+        <div class="input-text">
+          <i class="fa-solid fa-calendar-days"></i>
+          <input type="date" id="date" name="date" [min]="getCurrentDate()" [max]="maxDate" required ngModel>         
+        </div>
+
+        <div class="input-text">
+          <i class="fa-sharp fa-solid fa-clock"></i>
+          <input type="time" id="time" name="time" required ngModel>          
+        </div>
+
+
+        <button class="login-btn" id="login" [disabled]="bookedForm.invalid" >Book now</button>
+        
+        
+        </form>
+      </div>
+    </div>
+    
+  </body>
+  </html>
+     
+     
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div *ngIf="!submitted else showSubmitted">
   <div class="box1">
     <div class="col-xs-5">
       <h2><strong>Selected Restaurant Details:</strong></h2>
@@ -62,69 +139,4 @@
   </div>
   <ng-template #showSubmitted>
     <p class="green-text">Thanks for registering.</p>
-  </ng-template>
-    
-     
-
-     
-     
-     
-     
-     
-     
-     
-     
-     
-  <!-- <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="resv.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="design">
-        <img src="https://t3.ftcdn.net/jpg/05/66/54/16/360_F_566541693_WljU6enGuKCBVEn9vXhdCXL4uZ7wb6Xb.jpg" alt="table">
-        <div class="text-under-image">
-          <h2>Table Reservation</h2>
-          <p>Book your table now and enjoy our delicious menu!</p>
-        </div>
-      </div>
-     
-      <div class="login">
-        <h3 class="title">Book Your Table</h3>
-        <div class="input-text">
-          <i class="fa-solid fa-user"></i>
-          <input type="text" placeholder="Your name.." id="name">
-        </div>
-        <div class="email-text">
-          <i class="fa-solid fa-envelope"></i>
-          <input type="text" placeholder="Email" id="email">
-        </div>
-    
-        <div class="email-text">
-          <i class="fa-solid fa-phone"></i>
-          <input type="text" placeholder="phone number">
-        </div>
-    
-        <div class="input-text">
-          <i class="fa-solid fa-calendar-days"></i>
-          <input type="date">
-        </div>
-        <div class="input-text">
-          <i class="fa-sharp fa-solid fa-clock"></i>
-          <input type="time">
-        </div>
-    
-        <button class="login-btn" id="login" onclick="validate()">Book now</button>
-      </div>
-    </div>
-    
-  </body>
-  </html> -->
-     
-     
+  </ng-template> -->

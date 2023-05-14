@@ -1,5 +1,184 @@
+body{
+    font-family: 'Poppins',sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://resizer.otstatic.com/v2/photos/wide-huge/2/47187862.jpg);
+}
+.container {
+    display: flex;
+    width: 70vw;
+    height: 60vh;
+    margin: 0 auto;
+    box-shadow: 0 0 17px 10px rgba(169, 162, 162, 0.74);
+    border-radius: 20px;
+    overflow: hidden;
+  }
 
 
+  .design {
+    width: 50%;
+    height: 90%;
+    grid-area: design;
+    position: relative;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+    color: white;
+  }  
+
+  .design img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .login {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+.login h3.title{
+    margin: 15px 0;
+    color: #e6e6e6;
+}
+
+
+/* Style for disabled button */
+.login-btn:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/* Style for enabled button */
+.login-btn:not(:disabled) {
+  background: linear-gradient(to right , #ff966d, #fa538d, #89379c);
+  cursor: pointer;
+}
+
+
+.login-btn{
+    width: 68%;
+    padding: 10px;
+    color: white;
+    /* background: linear-gradient(to right , #ff966d, #fa538d, #89379c);     */
+    border: none;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+.input-text{
+    background: #e6e6e6;
+    height: 40px;
+    display: flex;
+    width: 130%;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 15px;
+    margin: 5px 0;
+}
+
+.email-text{
+    background: #e6e6e6;
+    height: 40px;
+    display: flex;
+    width: 130%;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 15px;
+    margin: 5px 0;
+    outline: none;
+}
+
+.input-text i{
+    color: #686868;
+}
+::placeholder{
+    color: #9a9a9a;
+}
+
+.input-text input{
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.email-text input{
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.title {
+    font-family: "Abril Fatface", cursive;
+    font-weight: bold;
+    color: #777;
+    font-size: 23px;
+}
+
+.text-under-image {
+    position: absolute;
+    padding-top: 0px;
+    bottom: 0px;
+    left: 10px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: white;
+  }
+  
+  .text-under-image h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .text-under-image p {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
   input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -98,159 +277,24 @@
   }
   .green-text{
     color: green;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* body{
-    font-family: 'Poppins',sans-serif;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://resizer.otstatic.com/v2/photos/wide-huge/2/47187862.jpg);
-}
-.container {
-    display: flex;
-    width: 70vw;
-    height: 60vh;
-    margin: 0 auto;
-    box-shadow: 0 0 17px 10px rgba(169, 162, 162, 0.74);
-    border-radius: 20px;
-    overflow: hidden;
-  }
-
-
-  .design {
-    width: 50%;
-    height: 90%;
-    grid-area: design;
-    position: relative;
-    border-radius: 20px 0 0 20px;
-    overflow: hidden;
-  }  
-
-  .design img {
-    width: 80%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
-  .login {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-.login h3.title{
-    margin: 15px 0;
-    color: #e6e6e6;
-}
-
-.login-btn{
-    width: 68%;
-    padding: 10px;
-    color: white;
-    background: linear-gradient(to right , #ff966d, #fa538d, #89379c);
-    border: none;
-    border-radius: 20px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.input-text{
-    background: #e6e6e6;
-    height: 40px;
-    display: flex;
-    width: 60%;
-    align-items: center;
-    border-radius: 10px;
-    padding: 0 15px;
-    margin: 5px 0;
-}
-
-.email-text{
-    background: #e6e6e6;
-    height: 40px;
-    display: flex;
-    width: 60%;
-    align-items: center;
-    border-radius: 10px;
-    padding: 0 15px;
-    margin: 5px 0;
-    outline: none;
-}
-
-.input-text i{
-    color: #686868;
-}
-::placeholder{
-    color: #9a9a9a;
-}
-.input-text input{
-    background: none;
-    border: none;
-    outline: none;
-    width: 100%;
-    height: 100%;
-    margin-left: 10px;
-}
-
-.email-text input{
-    background: none;
-    border: none;
-    outline: none;
-    width: 100%;
-    height: 100%;
-    margin-left: 10px;
-}
-
-.title {
-    font-family: "Abril Fatface", cursive;
-    font-weight: bold;
-    color: #777;
-    font-size: 23px;
-}
-
-.text-under-image {
-    position: absolute;
-    padding-top: 0px;
-    bottom: 10px;
-    left: 10px;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    color: white;
-  }
-  
-  .text-under-image h2 {
-    font-size: 24px;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  
-  .text-under-image p {
-    font-size: 16px;
-    margin-top: 0;
-    margin-bottom: 0;
   } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 

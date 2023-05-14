@@ -15,10 +15,8 @@ import { RestaurantListComponent } from './reservations/restaurant-list/restaura
 import { RestaurantDetailsComponent } from './reservations/restaurant-details/restaurant-details.component';
 import { RestaurantItemComponent } from './reservations/restaurant-list/restaurant-item/restaurant-item.component';
 import { AthidhiLayoutComponent } from './reservations/athidhi-layout/athidhi-layout.component';
-import { AthidhiComponent } from './athidhi/athidhi.component';
 import { SwagathComponent } from './swagath/swagath.component';
 import { DetailsComponent } from './reservations/details/details.component';
-import { FillComponent } from './fill/fill.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -43,12 +41,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     RestaurantListComponent,
     RestaurantDetailsComponent,
     RestaurantItemComponent,
-    AthidhiLayoutComponent,
-    AthidhiComponent,
+    AthidhiLayoutComponent,   
     SwagathComponent,
     DetailsComponent,    
-    FillComponent,
-    
     
     
   ],
